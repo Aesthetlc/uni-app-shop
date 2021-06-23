@@ -22,6 +22,16 @@
 			"path": "pages/news/news"
 
 
+		},
+		{
+			"path": "pages/contact/contact"
+
+		},
+		{
+			"path": "pages/pics/pics",
+			"style":{
+				"navigationBarTitleText":"社区图片"
+			}
 		}
 	],
 	"globalStyle": {
