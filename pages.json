@@ -24,6 +24,11 @@
 
 		},
 		{
+			"path": "pages/newsDetail/newsDetail"
+		
+		
+		},
+		{
 			"path": "pages/contact/contact"
 
 		},
