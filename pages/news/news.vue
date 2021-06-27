@@ -24,6 +24,7 @@
 				})
 				this.contentArr = res.data.message.goods
 			},
+			// 跳转详情
 			geDetail(id) {
 				uni.navigateTo({
 					url: '/pages/newsDetail/newsDetail?id=' + id

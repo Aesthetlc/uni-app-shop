@@ -16,7 +16,7 @@
 			<view class="tit">
 				推荐商品
 			</view>
-			<goods :goods="hotGoodsArr"></goods>
+			<goods @goodsItemClick="goGoodsDetail" :goods="hotGoodsArr"></goods>
 		</view>
 	</view>
 </template>
@@ -88,6 +88,12 @@
 			gotoPath(item) {
 				uni.navigateTo({
 					url: item.path
+				})
+			},
+			// 导航到商品详情页
+			goGoodsDetail(id) {
+				uni.navigateTo({
+					url: '/pages/goodsDetail/goodsDetail?id=' + id
 				})
 			}
 		}

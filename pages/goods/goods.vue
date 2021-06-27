@@ -1,6 +1,6 @@
 <template>
 	<view class="goods_list">
-		<goods :goods="goodsList"></goods>
+		<goods @goodsItemClick="goGoodsDetail" :goods="goodsList"></goods>
 		<view class="isOver" v-if="flag"> -----别刷新了，没有了-----</view>
 	</view>
 </template>
@@ -48,6 +48,12 @@
 				this.goodsList = [...this.goodsList, ...res.data.message.goods]
 				this.total = res.data.message.total
 				callBack && callBack()
+			},
+			// 导航到商品详情页
+			goGoodsDetail(id) {
+				uni.navigateTo({
+					url: '/pages/goodsDetail/goodsDetail?id=' + id
+				})
 			}
 		}
 	}

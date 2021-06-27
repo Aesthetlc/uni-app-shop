@@ -1,6 +1,6 @@
 <template>
 	<view class="goods_list">
-		<view class="goods_item" v-for="item in goods" :key="item.goods_id">
+		<view class="goods_item" @click="navigator(item.goods_id)" v-for="item in goods" :key="item.goods_id">
 			<image src="../../static/logo.png" mode=""></image>
 			<view class="price">
 				<text>￥{{ item.goods_price }}</text>
@@ -25,6 +25,11 @@
 			goods: {
 				type: Array,
 				default: () => []
+			}
+		},
+		methods:{
+			navigator(id){
+				this.$emit('goodsItemClick',id)
 			}
 		}
 	}
